@@ -9,8 +9,6 @@ class GroupsController < ApplicationController
 
     end
     def edit
-
-      end
     end
     def new
        @group = Group.new
@@ -38,7 +36,7 @@ class GroupsController < ApplicationController
     def destroy
 
       @group.destroy
-    
+
       redirect_to groups_path, alert: "Group deleted"
 
     end
@@ -58,7 +56,4 @@ def group_params
   params.require(:group).permit(:title, :description)
 
 end
-
-
-
 end
